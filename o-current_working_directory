@@ -1,1 +1,4 @@
-
+import os
+current directory = os.getcwd()
+absolute_path = os.path.abspath(current_directory)
+print("Asolute path of the current working directory:",absolute_path)
