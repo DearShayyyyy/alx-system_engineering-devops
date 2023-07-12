@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Define the alias command
+alias_name="myalias"
+alias_command="ls -al"
+
+# Check if the alias already exists
+if alias | grep -q "^alias $alias_name="
+then
+  echo "Alias '$alias_name' already exists. Skipping creation."
+else
+  # Add the alias command to the shell configuration file (e.g., .bashrc or .bash_profile)
+  echo "alias $alias_name='$alias_command'" >> ~/.bashrc
+  
+  # Reload the shell configuration
+  source ~/.bashrc
+  
+  echo "Alias '$alias_name' created successfully. You can now use it by typing '$alias_name' in the terminal."
+fi
