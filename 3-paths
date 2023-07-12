@@ -1,0 +1,7 @@
+import os
+
+path = os.environ['PATH']
+directories = path.split(os.pathsep)
+num_directories = len(directories)
+
+print(f"The number of directories in the PATH is: {num_directories}")
